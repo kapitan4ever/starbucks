@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" title="Это пример верстки. Кнопка никуда не ведет"><img src="img/logo.png" class="logo" alt="Starbucks logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет">Home</a></li>
+                <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет">Menu</a></li>
+                <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет">What's New</a></li>
+                <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет">Contact</a></li>
+            </ul>    
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae fugit odio, distinctio nostrum commodi aspernatur. Eum delectus, incidunt, placeat cum enim ut deleniti doloribus quos aspernatur excepturi suscipit veniam est.</p>
+                <a href="#" class="btn"  title="Это пример верстки. Кнопка никуда не ведет">
+                    Learn More
+                </a>
+            </div>
+            <div class="imgBox">
+                <img src="img/img1.png" alt="" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" alt="starbucks2" onclick="imgSlider('img/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb2.png" alt="starbucks3" onclick="imgSlider('img/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="img/thumb3.png" alt="starbucks1" onclick="imgSlider('img/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет"><img src="img/facebook.png" alt="facebook"></a></li>
+            <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет"><img src="img/instagram.png" alt="instagram"></a></li>
+            <li><a href="#" title="Это пример верстки. Кнопка никуда не ведет"><img src="img/twitter.png" alt="twitter"></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            let menuToggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
